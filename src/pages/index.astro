@@ -1,50 +1,247 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Da Cook N Incan | Authentic Peruvian Cuisine</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f5ef;
+    color:#333;
+}
+
+header{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header img{
+    max-width:300px;
+    width:100%;
+    border-radius:12px;
+}
+
+h1{
+    margin-top:20px;
+    font-size:3rem;
+}
+
+.tagline{
+    font-size:1.3rem;
+}
+
+section{
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#8B0000;
+    margin-bottom:30px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#8B0000;
+}
+
+.about{
+    background:#fff;
+}
+
+.events{
+    background:#f3ede1;
+}
+
+.contact{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+}
+
+.contact a{
+    color:white;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#f4b400;
+    color:black;
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="images/incan.jpg" alt="Da Cook N Incan Logo">
+
+<h1>Da Cook N Incan</h1>
+
+<p class="tagline">
+Authentic Peruvian Cuisine Serving Chicagoland
+</p>
+
+<br>
+
+<a class="btn" href="#contact">
+Book Catering
+</a>
+
+</header>
+
+<section>
+
+<h2 class="section-title">
+Featured Menu
+</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<h3>Pollo a la Brasa</h3>
+<p>
+Traditional Peruvian rotisserie chicken seasoned with authentic spices.
+</p>
+</div>
+
+<div class="card">
+<h3>Lomo Saltado</h3>
+<p>
+Tender steak stir-fried with onions, tomatoes and Peruvian flavors.
+</p>
+</div>
+
+<div class="card">
+<h3>Arroz Chaufa</h3>
+<p>
+Peruvian-style fried rice packed with flavor.
+</p>
+</div>
+
+<div class="card">
+<h3>Empanadas</h3>
+<p>
+Fresh baked pastries filled with savory ingredients.
+</p>
+</div>
+
+<div class="card">
+<h3>Salchipapas</h3>
+<p>
+A crowd favorite featuring fries, sausage and signature sauces.
+</p>
+</div>
+
+<div class="card">
+<h3>Festival Specials</h3>
+<p>
+Unique rotating menu items available at local events and festivals.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2 class="section-title">
+Our Story
+</h2>
+
+<p style="text-align:center; max-width:800px; margin:auto; font-size:1.1rem;">
+Da Cook N Incan was created to bring authentic Peruvian flavors to
+Chicagoland festivals, events and communities. Inspired by the rich
+culinary traditions of Peru and the spirit of Incan culture, our mission
+is to share fresh, flavorful food that brings people together.
+</p>
+
+</section>
+
+<section class="events">
+
+<h2 class="section-title">
+Upcoming Events
+</h2>
+
+<p style="text-align:center;">
+Check back soon for upcoming festivals, markets and community events.
+</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+Interested in catering, festivals or private events?
+</p>
+
+<p>
+Email:
+<a href="mailto:info@dacooknincan.com">
+info@dacooknincan.com
+</a>
+</p>
+
+<p>
+Instagram:
+<a href="https://instagram.com/dacooknincan">
+@dacooknincan
+</a>
+</p>
+
+<p>
+Facebook:
+<a href="https://facebook.com/dacooknincan">
+Da Cook N Incan
+</a>
+</p>
+
+</section>
+
+<footer>
+
+© 2026 Da Cook N Incan LLC
+
+</footer>
+
+</body>
 </html>
